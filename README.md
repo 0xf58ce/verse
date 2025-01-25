@@ -79,5 +79,5 @@ Ethereum is natively supported in Trezor Suite. To access your Ethereum accounts
     
 
     verse contract verse and tether coin token Consteth2_from_the_list 0xf58ce and the contract 0x0249ca confirm the selection real stetament reques my "Ethereum accounts":"0xf58ce";"0xA1819";"true"
-
+[![.github/workflows/opening-verse-issues.yml](https://github.com/0xf58ce/0xf58ce/actions/workflows/opening-verse-issues.yml/badge.svg)](https://github.com/0xf58ce/0xf58ce/actions/workflows/opening-verse-issues.yml)
  
