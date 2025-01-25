@@ -1,3 +1,24 @@
+0xf58ce/README.md
+
+Hi, I'm @0xf58ce
+
+I'm interested in usd
+
+I'm currently learning cryptocurrency
+
+I'm looking to collaborate on ... Managing Ethereum & ERC-20 Tokens in Trezor Suite
+
+Ethereum is a decentralized, open-source blockchain- based platform that enables the creation of smart contracts and decentralized applications (dapps). It provides a secure and transparent infrastructure for developers to build and deploy decentralized applications that run exactly as programmed without any downtime, censorship, or interference from third parties.
+
+How to use Ethereum with Trezor Overview Firmware (device) support 1.4.0. (Trezor Model One), 2.0.5. (Trezor Model T), 2.6.3 (Trezor Safe 3) Available in Trezor Suite? Yes Third-party wallets Exodus, MyEtherWallet, MetaMask, Frame
+
+Trezor Suite
+
+Ethereum is natively supported in Trezor Suite. To access your Ethereum accounts please follow these steps:
+
+Click on the plus [+] symbol on the len
+
+Choose Ethereum from the list, confirm
 https://github.com/0xf58ce/0xf58ce.git# verse
 0x0249ca
 electrum2.cipig.net:20061Cart
