@@ -1,4 +1,6 @@
-0xf58ce/README.md
+0xf58ce 
+0xA
+/README.md
 
 Hi, I'm @0xf58ce
 
@@ -48,7 +50,7 @@ What does this mean for users?
 Starting with the February 2025 release of Trezor Suite, the affected coins will no longer be supported. Here's what you need to know:
 
     Access through Trezor Suite: You will not be able to view or manage these coins within Trezor Suite after the deprecation date.
-    Continued backend support: Backends for these coins will remain operational until the end of July 2025. This allows you to use older versions of Trezor Suite if necessary to access your funds.
+    Continued backend support: Backends for these coins will remain operational until the end of July 2025. This allows you to use older versions of Trezor Suite if necessary to access your funds. 2605:8d80:6e1:ead:9183:6293:d1ad:dd0e
     Action required: We recommend migrating your funds to alternative wallets before the deprecation to ensure uninterrupted access and security.
 
 
@@ -83,9 +85,10 @@ Ethereum is a decentralized, open-source blockchain-based platform that enables 
 
 How to use Ethereum with Trezor
 Overview
-  Firmware (device) support 	1.4.0. (Trezor Model One), 2.0.5. (Trezor Model T), 2.6.3 (Trezor Safe 3)
-Available in Trezor Suite? 	Yes
-Third-party wallets 	Exodus, MyEtherWallet, MetaMask, Frame
+  Firmware digital fingerprint (2605:8d80:6e1:ead:9183:6293:d1ad:dd0e) okx.com  v2.104.0. (wallet-apl-approved), 2.0.5. (Trezor get backup approved , 2.6.3 (Trezor wallet pixel8)
+all the data issue 2025-01-25T07:25:00 will be Available in Trezor Suite one name pixel8
+address 
+Third-party wallets 	Exodus, MyEtherWallet, itoken wallet 0xAa0e9 
  
 
  
