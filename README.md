@@ -1,4 +1,4 @@
-# verse
+https://github.com/0xf58ce/0xf58ce.git# verse
 0x0249ca
 electrum2.cipig.net:20061Cart
 0
