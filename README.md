@@ -1,15 +1,49 @@
-0xf58ce 
-0xA
-/README.md
-
-Hi, I'm @0xf58ce
-
-I'm interested in usd
-
-I'm currently learning cryptocurrency
-
-I'm looking to collaborate on ... Managing Ethereum & ERC-20 Tokens in Trezor Suite
-
+> README
+>const_eth2";"typescriptOptions";"décryptage"
+>
+> "System.config";"({décryptage})",
+>  "external compilation":"0xf58ce",
+>  "typescriptOptions: {resolve}
+>     "main=external: './main.0xf58ce',
+>      "defaultExtension: '0xf58ce'
+>    }
+>  },
+>  meta: {0xf58ce}
+>    'typescript': { 'exports': 'ts' }
+>  },
+>  paths: {m 44'/60'/0'/0'/0"
+>    'npm:': 'check'
+>  map: {> 🧾this project utilise the next eth2 dns�
+>️                     📡
+>         �⚖️yerestephpachuroche.eth⚖️
+>            🔓PRIVATE BELOW INFO🔏
+>    🔹�walletaplapprouve@gmail.com 📩
+>    🔹�🇨🇦� �🇴Owener:Amparo family 🏅🏅
+>    🔹contact tel: +1(365)*******1 📞
+>    🔹 location canada ontario Hamilton,usa Massachusetts boston,dominican rep national zone santo Domingo 🌎
+>    🔹business family finance investment 📊
+>    
+> 🏦💵💲💸💴🪙🤑cryptocurrency usage✔️♥,️
+>    🔹private key 🔑
+> "B F B B 25",
+> "PRINCIPAL ADRESSE INF";
+> "ethereum inf";
+>             "0xf58ce",
+>             "0xEa459",
+> "bitcoon";
+>             "bc1qm3j",
+> "X";
+>             "r4itzZz",
+> "Solana";
+>             "4T1atf4",
+>             "1kuygWd",
+> "cardamo";
+>             addr1qx           
+>             
+> 🗒️ this is a ✨ 0x0249ca_special_contract✨ repository for all the projects appears in my gighud profil
+> const_eth2.import(real.code.statement)
+  .catch(console.okx.com/bitget.io/exodus.io/phantom.wallet/.bind(console));
+>
 Ethereum is a decentralized, open-source blockchain- based platform that enables the creation of smart contracts and decentralized applications (dapps). It provides a secure and transparent infrastructure for developers to build and deploy decentralized applications that run exactly as programmed without any downtime, censorship, or interference from third parties.
 
 How to use Ethereum with Trezor Overview Firmware (device) support 1.4.0. (Trezor Model One), 2.0.5. (Trezor Model T), 2.6.3 (Trezor Safe 3) Available in Trezor Suite? Yes Third-party wallets Exodus, MyEtherWallet, MetaMask, Frame
