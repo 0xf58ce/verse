@@ -30,8 +30,10 @@
 > "ethereum inf";
 >             "0xf58ce",
 >             "0xEa459",
+>             "0x18195", 
 > "bitcoon";
 >             "bc1qm3j",
+>             "bc1q0cc",
 > "X";
 >             "r4itzZz",
 > "Solana";
