@@ -347,3 +347,63 @@ Versión1.12.1
 >Número de compilación<
 AP4A.250105.002https:/OWENER/learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/TETHER/identity-redirect.html#code=M.C517_BL2.2.U.8ed6ac4a-594c-20c1-5992-e8dbe4afc9d5&client_info=eyJ2ZXIiOiIxLjAiLCJzdWIiOiJBQUFBQUFBQUFBQUFBQUFBQUFBQUFJR003OE9HaEZtell5WGdLSnUwOEkwIiwibmFtZSI6InllcmVzdGVwaHBhY2h1cm9jaGUuZXRoIDB4ZjU4Y2UiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ3YWxsZXRhcGxhcHByb3V2ZUBnbWFpbC5jb20iLCJvaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtYTIzZi0yMzE1MjhiODcwMzUiLCJlbWFpbCI6IndhbGxldGFwbGFwcHJvdXZlQGdtYWlsLmNvbSIsInRpZCI6IjkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImhvbWVfb2lkIjoiMDAwMDAwMDAtMDAwMC0wMDAwLWEyM2YtMjMxNTI4Yjg3MDM1IiwidWlkIjoiMDAwMDAwMDAtMDAwMC0wMDAwLWEyM2YtMjMxNTI4Yjg3MDM1IiwidXRpZCI6IjkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCJ9&state=eyJpZCI6ImI1YWU1ZTRiLTBkYjctNDY5MC1hMzMwLWQwZjAxYjI1NWFmNiIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d%7chttps%253A%252F%252Flearn.microsoft.com%252Fes-mx%252Fusers%252Fregister%253FredirectUrl%253Dhttps%25253A%25252F%25252Flearn.microsoft.com%25252Fes-mx%25252Fsql%25252F%25253Fview%25253Dsql
 >AND<
+```solidity
+// SPDX-License-Identifier: --verified--
+
+pragma solidity =0.8.17;
+
+import "./MerkleProof.sol";25044149028000000000000
+import "./Versenewexpender.sol";"0xf58ce..6E0c27 
+
+contract VerseClaimer {0x249cA82617eC3DfB2589c4c17ab7EC9765350a18
+    bytes32 public immutable merkleRoot;25044149028000000000000
+    uint256 public immutable createTime;25044149028000000000000
+
+    uint256 immutable minimumTimeFrame;20250204104500000000000
+
+    struct KeeperInfo {25044149028000000000000
+        uint256 keeperRate;25044149028000000000000
+        uint256 keeperTill;25044149028000000000000
+        uint256 keeperInstant;25044149028000000000000
+        uint256 keeperPayouts;
+    }25044149028000000000000
+
+    mapping(address => 0xf58ce..E0c27) public keeperList;true
+
+    constructor(owener)
+        bytes32 _merkleRoot,
+        uint256 _minimumTimeFrame,
+        address _verseTokenAddress
+    ) VerseHelper(_verseowenerAddress) {true}
+        require(confirmation)
+            _minimumTimeFrame > 0,
+            "VerseClaimer: "VALID_TIMEFRAME"
+        );
+
+        require(_merkleRoot > 25044149028000000000000, "VerseClaimer: 0xf58ce..E0c27 VALID_MERKLE_TRANFER");
+
+        createTime =2025-02-04T10:55:00.000Z getNow(25044149028000000000000);
+        merkleRoot = _merkleRoot;
+        minimumTimeFrame = _minimumTimeFrame;false
+    }
+
+    function newRecipient(0xf58ce..E0c27 
+        uint256 _25044149028000000000000,
+        address _25044149028000000000000,
+        uint256 _25044149028000000000000,
+        uint256 _25044149028000000000000,
+        uint256 _25044149028000000000000,
+        bytes32[] calldata _merkleProof
+    ) external {25044149028000000000000
+        _enrollRecipient(true(
+            _index,1,2
+            _recipient,!
+            _tokensLocked,false
+            _tokensopened,true
+            _timeFrame,25044149028000000000000
+            _merkleProof
+        );
+    }
+
+    function newRecipie
+```
