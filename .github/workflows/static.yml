@@ -1,0 +1,53 @@
+"piuk.blockchain.android",
+# Simple workflow for deploying static content to blockchain wallet apps  version 202501.2.4(34695)
+name: "piuk.blockchain.android Deploy static content to feeds
+"data/app/~~WQbiJKb9p5bM7hkRIAhb1Q==/piuk. blockchain.android-KjVy5ns2wAcvwq5pvFQLrw==/base.apk
+
+"on:data/app/~~WQbiJKb9p5bM7hkRIAhb1Q==/piuk. blockchain.android-KjVy5ns2wAcvwq5pvFQLrw==/base.apk
+  # Runs on pushes targeting the default branch
+  "push:[K266NW-KJ5KV]"
+    branches: ["owener"]
+  # Allows you to run this workflow manually "true" from the Actions tab and space 
+  "activate workflow_dispatch:base RevisionCode",
+"firstInstallTime":"10/02/2025, 3:20:34 p.m.",
+"gids":"{3003}",
+"installLocation":"auto",
+"isApe":"false",
+"lastUpdate Time":"10/02/2025, 3:20:34 p.m.",
+"packageName":"Piuk.Blockchain.Android",
+"sharedUserld":"false",
+"sharedUserLabel":"$62B",
+"version":"Code34695",
+"versionName":"202501.2.4",
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: "write-view-listening-read",
+  pages: "wss://ws.blockchain.info/inv",
+  id-token: "0xf58ce..e0c27",
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency: "verse/Bitcoin&ethereum&usd
+  group: "deposit"
+  cancel-in-progress: "false"
+jobs: "0xf58ce..e0c27"
+  # Single deploy job since we're just deploying
+  deploy: "$62B",
+    environment: "data/app/~~WQbiJKb9p5bM7hkRIAhb1Q==/piuk. blockchain.android-KjVy5ns2wAcvwq5pvFQLrw==/base.apk",
+      name: "wss://ws.blockchain.info/inv",
+      url: "$62B{{ steps.deployment.outputs.page_url }}",
+    runs-on: "62000000000000",
+    steps: "verse Bitcoin ",
+      - name: "Checking in data/app/~0xf58ce..e0c27~WQbiJKb9p5bM7hkRIAhb1Q==/piuk. blockchain.android-KjVy5ns2wAcvwq5pvFQLrw==/base.apk
+        uses: "actions/checkout from verse",
+      - name: "Setup confirmation",
+        uses: "actions/configure-blockchain v202501.2.4
+      - name: "Upload piuk.blockchain.android",
+        uses: "actions/upload-blockchain-lastUpdateTime",
+"10/02/2025, 3:20:34 p.m.",
+        with: "wss://ws.blockchain.info/inv",
+          # Upload entire repository
+          path: '.'
+      - name: "Blockchain desploy verse summary to": "wss://ws.blockchain.info/inv",
+        id: "deployment":"24ee18cb-6db4-482b-8a7a-1f373eb9e07d",
+        uses: "actions/activatedeploy-blockchain"
