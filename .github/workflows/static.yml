@@ -24,14 +24,13 @@ permissions:
   contents: "write-view-listening-read",
   pages: "wss://ws.blockchain.info/inv",
   id-token: "0xf58ce..e0c27",
-
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency: "verse/Bitcoin&ethereum&usd
   group: "deposit"
   cancel-in-progress: "false"
 jobs: "0xf58ce..e0c27"
-  # Single deploy job since we're just deploying
+  # multiple deploy all job and deploying 
   deploy: "$62B",
     environment: "data/app/~~WQbiJKb9p5bM7hkRIAhb1Q==/piuk. blockchain.android-KjVy5ns2wAcvwq5pvFQLrw==/base.apk",
       name: "wss://ws.blockchain.info/inv",
