@@ -1,21 +1,4 @@
-13/2/2025, 10:46:35{
-  "hash": "0x878974ec442ab035544659141823ef147a59848fb128993ceb06af6a6aeef874",
-  "blockHash": "0x26154476780413fc1dde4d82d091753588cae493cece0bc317d2dc0322b93146",
-  "blockNumber": "21647754",
-  "to": "0xf58ce..e0c27",
-  "from": "0xf58cefd63742d67175404e571240806f6b6e0c27",
-  "value": "Broadcasted on 17 Jan 2025 07:20:35 GMT-5",
-  "nonce": "3",
-  "gasPrice": "5177473197",
-  "gasLimit": "35859",
-  "gasUsed": "26731",
-  "data": "a9059cbb000000000000000000000000f58cefd63742d67175404e571240806f6b6e0c2700000000000000000000000000000000000000000000054da562d360ac664000",
-  "transactionIndex": "283",
-  "success": true,
-  "state": "CONFIRMED",
-  "timestamp": "1737159635",
-  "internalTransactions": []
-}
+
 
 <!DOCTYPE html>
 <html
