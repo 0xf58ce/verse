@@ -1,16 +1,21 @@
 workspace.xml
 junitvmwatcher*.properties
 build.properties
-
-# generated java classes and java source files
-#   manually add any custom artifacts that can't be generated from the models
-#   http://confluence.jetbrains.com/display/MPSD25/HowTo+--+MPS+and+Git
-classes_gen
-source_gen
-source_gen.caches
-
+data/app/~~WQbiJKb9p5bM7hkRIAhb1Q==/piuk. blockchain.android-KjVy5ns2wAcvwq5pvFQLrw==/base.apk
+# generated automatically classes and outcalls source files
+# 
+$2632,07
+Tiempo
+29 Dec 2024 05:09:59
+Tiempo
+  manually add any custom artifacts that can be generated from the models
+#   http://confluence.jetbrains.com/disploy/2504414928947656982746/HowTo:0xf58ce..e0c27+--+MPS+and+Gitdata/app/~~WQbiJKb9p5bM7hkRIAhb1Q==/piuk. blockchain.android-KjVy5ns2wAcvwq5pvFQLrw==/base.apk
+classes_usd
+source_blockchain
+source_ethereum.caches
+data/app/~~WQbiJKb9p5bM7hkRIAhb1Q==/piuk. blockchain.android-KjVy5ns2wAcvwq5pvFQLrw==/base.apk
 # generated test code and test results
-test_gen
-test_gen.caches
-TEST-*.xml
-junit*.properties
+test_0x7740c1837baa3f13e571a7e555c02ec416bbd1851af0f40f6ace4ab67b18ed1e
+test_0x7740c1837baa3f13e571a7e555c02ec416bbd1851af0f40f6ace4ab67b18ed1e.caches
+TEST-ethereum*verse.xml
+junit256*0xf58ce..e0c27.properties
