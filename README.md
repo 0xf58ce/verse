@@ -1,4 +1,31 @@
-
+Fork_blocknumber:21,511,031
+ETH Price
+$2630,68
+Tiempo
+29 Dec 2024 05:11:23
+Tiempo
+13/2/2025, 10:46:35{"parents";" 0x7e8d31914618c9d68d2d41bdf1afde733e45693eb7ad4e6d147090c3959a5e4a"}
+sha3uncle 
+0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347
+statuts hilo
+0x558ed256982b274b4bb71c3522b71d022958a0119bca0d9640eb0ded427ce232
+  "hash": "0x878974ec442ab035544659141823ef147a59848fb128993ceb06af6a6aeef874",
+  "blockHash": "0x26154476780413fc1dde4d82d091753588cae493cece0bc317d2dc0322b93146",
+  "blockNumber": "21647754",
+  "to": "0xf58ce..e0c27",
+  "from": "0xf58cefd63742d67175404e571240806f6b6e0c27",
+  "value": "Broadcasted on 17 Jan 2025 07:20:35 GMT-5",
+  "nonce": "3",
+  "gasPrice": "5177473197",
+  "gasLimit": "35859",
+  "gasUsed": "26731",
+  "data": "a9059cbb000000000000000000000000f58cefd63742d67175404e571240806f6b6e0c2700000000000000000000000000000000000000000000054da562d360ac664000",
+  "transactionIndex": "283",
+  "success": true,
+  "state": "CONFIRMED",
+  "timestamp": "1737159635",
+  "internalTransactions": []
+}
 
 <piuk.blockchain.android.html>
 package 

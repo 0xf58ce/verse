@@ -1,0 +1,85 @@
+Ethereum Transaction confirmed 
+Broadcasted on 29 Dec 2024 01:18:23 GMT-5
+Hash ID
+0xb1f7dd83bf348c3b98508ae4f4dc3614a9b3fb6536a4351acb0dd43b3e911351
+Amount
+0.00313525
+ETH
+• $8,25
+Comisión
+121.961
+GWEI
+• $0,32
+De
+0xaa0-883e0
+Para
+0xf58-e0c27
+
+summary 
+This transaction has 329.001 Confirmaciones. It was mined in Block 21.509.870
+This transaction was first broadcasted on the Ethereum network on December 29, 2024 at 01:18 AM GMT-5. The transaction currently has 329.001 confirmations on the network. The current value of this transaction is now $8,25.
+Función hash
+Unique identifier used to identify a particular transaction
+0xb1-1351 
+De
+0xaa-83e0 
+Para
+0xf5-0c27 
+Confirmaciones
+329.005
+ID del bloque
+21.509.870
+Posición
+61
+Transacciones internas
+0.00313525
+ETH
+•$8,24
+Total
+10.003257211343756 Ether
+Valor
+0.00313525 Ether
+(3.135.250 Gwei)
+$8,24
+Comisión
+0.000121961343756 Ether
+121.961 Gwei
+$0,32
+ETH Price
+$2627,59
+Tiempo
+29 Dec 2024 01:18:23
+Tiempo
+1m 14d 22h 36m 40s
+Precio de gas
+0.000000005807683036 Ether
+Límite de gas
+50.000
+Gas Usage
+21.000 (42,00%)
+Número de un solo uso
+145.378
+from:0xaa0e9a1e2d2ccf2b867fda047bb5394bef1883e00.00313525
+ETH
+•$8,24
+to:0xf58cefd63742d67175404e571240806f6b6e0c270.00313525
+ETH
+•$8,24
+{
+  "hash": "0xb1f7dd83bf348c3b98508ae4f4dc3614a9b3fb6536a4351acb0dd43b3e911351",
+  "blockHash": "0xf171880d129e46b65beafce9970bb79d538dbb89f04f3a38ccb09e478ce4d358",
+  "blockNumber": "21509870",
+  "to": "0xf58cefd63742d67175404e571240806f6b6e0c27",
+  "from": "0xaa0e9a1e2d2ccf2b867fda047bb5394bef1883e0",
+  "value": "3135250000000000",
+  "nonce": "145378",
+  "gasPrice": "5807683036",
+  "gasLimit": "50000",
+  "gasUsed": "21000",
+  "transactionIndex": "61",
+  "success": true,
+  "state": "CONFIRMED",
+  "timestamp": "1735496303",
+  "internalTransactions": [3135250000000000]
+}
+

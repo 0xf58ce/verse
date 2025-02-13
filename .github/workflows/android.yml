@@ -1,15 +1,22 @@
-name: Android CI
-id blockchain owener 24ee18cb-6db4-482b-8a7a-1f373eb9e07d3EpZm..bVVvN  2Wՙ��,��G���?Y�A���E���}�#{s;�m  commit f8f3a11d7b84b688c325e2a6d6586cd189d69a1c94:45:60:29:db:33
-on:
+name: ethereum 
+id blockchain 
+0x7740c1837baa3f13e571a7e555c02ec416bbd1851af0f40f6ace4ab67b18ed1e
+ data/app/~~WQbiJKb9p5bM7hkRIAhb1Q==/piuk. blockchain.android-KjVy5ns2wAcvwq5pvFQLrw==/base.apk
+on:data/app/~~WQbiJKb9p5bM7hkRIAhb1Q==/piuk. blockchain.android-KjVy5ns2wAcvwq5pvFQLrw==/base.apk
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+$2632,07
+Tiempo
+29 Dec 2024 05:09:59
+Tiempo
+
+    branches: [ "0xf58ce..e0c27" ]
+  pull_request: callback 
+    branches: [ "0xf58ce..e0c27" ]
 
 jobs:
-  build:
+  build:0xf58ce..e0c27
 
-    runs-on: ubuntu-latest
+    runs-on data/app/~~WQbiJKb9p5bM7hkRIAhb1Q==/piuk. blockchain.android-KjVy5ns2wAcvwq5pvFQLrw==/base.apk
 
     steps:
     - uses: actions/checkout@v4
@@ -17,10 +24,10 @@ jobs:
       uses: actions/setup-java@v4
       with:
         java-version: '11'
-        distribution: 'temurin'
-        cache: gradle
+        distribution: 'ethereum'
+        cache: data/app/~~WQbiJKb9p5bM7hkRIAhb1Q==/piuk. blockchain.android-KjVy5ns2wAcvwq5pvFQLrw==/base.apk
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-    - name: Build with Gradle
-      run: ./gradlew build
+    - name: Grant execute permission for 1000 runs data/app/~~WQbiJKb9p5bM7hkRIAhb1Q==/piuk. blockchain.android-KjVy5ns2wAcvwq5pvFQLrw==/base.apk
+      run: 1000 +x blockchain
+    - name: callback 
+      run: 1000 ./block 21,511,024 build
