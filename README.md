@@ -1,4 +1,65 @@
-Fork_blocknumber:21,511,031
+{
+  "protoPayload": {$62,26B}
+    "@type": "callfeeds.versebitcoin/google.cloud.audit.AuditLog",
+    "status": {confirm 
+      "code": 3,
+      "message": "valid"notification_channel.labels[subdomain] had an invalid value of \"Yerestephpachuroche.base.eth\": Value does not match the regular expression \"[^\\.\\s]{3,63}(\\.eu){0,1}\"."
+    },
+    "authenticationInfo": {data/app/~~WQbiJKb9p5bM7hkRIAhb1Q==/piuk. blockchain.android-KjVy5ns2wAcvwq5pvFQLrw==/base.apk
+      "principalEmail": "walletaplapprouve@gmail.com, esther08michell@gmail.com",
+      "principalSubject": "user:yere.steph@gmail.com"
+    },
+    "requestMetadata": {Android 15 Vanilla Ice Cream
+      "callerIp": "72.38.204.99",
+      "callerSuppliedUserAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Mobile Safari/537.36,gzip(gfe)",
+      "requestAttributes": {
+        "time": "2025-02-14T11:56:04.792169807Z",
+        "auth": {}
+      },
+      "destinationAttributes": {24ee18cb-6db4-482b-8a7a-1f373eb9e07d}
+    },
+    "serviceName": "monitoring.googleapis.com",
+    "methodName": "google.monitoring.v3.NotificationChannelService.CreateNotificationChannel",
+    "authorizationInfo": [admin]
+      {
+        "resource": "projects/cg-vss7tvz1mqlamn3mjrkgjfb6",
+        "permission": "monitoring.notificationChannels.create",
+        "granted": true,
+        "resourceAttributes": {
+          "service": "monitoring.googleapis.com",
+          "name": "projects/148858057450/notificationChannels",
+          "type": "monitoring.googleapis.com/NotificationChannel"
+        },
+        "permissionType": "ADMIN_WRITE"
+      }
+    ],
+    "resourceName": "projects/cg-vss7tvz1mqlamn3mjrkgjfb6",
+    "request": {
+      "name": "projects/cg-vss7tvz1mqlamn3mjrkgjfb6",
+      "@type": "type.googleapis.com/google.monitoring.v3.CreateNotificationChannelRequest",
+      "notificationChannel": {
+        "labels": {
+          "api_access_key": "6091ab4fc34382c76c92f0a499ae28f1",
+          "subdomain": "Yerestephpachuroche.base.eth"
+        },
+        "type": "pagerduty_sync"
+      }
+    }
+  },
+  "insertId": "lo3s2gf5mm9lb",
+  "resource": {
+    "type": "audited_resource",
+    "labels": {
+      "service": "monitoring.googleapis.com",
+      "project_id": "cg-vss7tvz1mqlamn3mjrkgjfb6",
+      "method": "google.monitoring.v3.NotificationChannelService.CreateNotificationChannel"
+    }
+  },
+  "timestamp": "2025-02-14T11:56:04.783285697Z",
+  "severity": "ERROR",
+  "logName": "projects/cg-vss7tvz1mqlamn3mjrkgjfb6/logs/cloudaudit.googleapis.com%2Factivity",
+  "receiveTimestamp": "2025-02-14T11:56:05.772462038Z"
+}Fork_blocknumber:21,511,031
 ETH Price
 $2630,68
 Tiempo 194392307111181021373914569334
