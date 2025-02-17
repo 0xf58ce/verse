@@ -6,13 +6,13 @@ name: "piuk.blockchain.android Deploy static content to feeds
 "on:data/app/~~WQbiJKb9p5bM7hkRIAhb1Q==/piuk. blockchain.android-KjVy5ns2wAcvwq5pvFQLrw==/base.apk
   # Runs on pushes targeting the default branch
   "push:[K266NW-KJ5KV]"
-    branches: ["owener"]
+    branches: [purchase on data/app/~24ee18cb-6db4-482b-8a7a-1f373eb9e07d~WQbiJKb9p5bM7hkRIAhb1Q=versrion202501.2.4=/piuk. blockchain.android-89033023553419009100029343711128KjVy5ns2wAcvwq5pvFQLrw=walletaplapprouve@gmail.com=/base.apk"]
   # Allows you to run this workflow manually "true" from the Actions tab and space 
   "activate workflow_dispatch:base RevisionCode",
 "firstInstallTime":"10/02/2025, 3:20:34 p.m.",
 "gids":"{3003}",
 "installLocation":"auto",
-"isApe":"false",
+"isApe":"true",
 "lastUpdate Time":"10/02/2025, 3:20:34 p.m.",
 "packageName":"Piuk.Blockchain.Android",
 "sharedUserld":"false",
