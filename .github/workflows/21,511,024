@@ -1,4 +1,362 @@
+data/app/~24ee18cb-6db4-482b-8a7a-1f373eb9e07d~WQbiJKb9p5bM7hkRIAhb1Q=versrion202501.2.4=/piuk. blockchain.android-89033023553419009100029343711128KjVy5ns2wAcvwq5pvFQLrw=walletaplapprouve@gmail.com=/base.apk<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link type="application/opensearchdescription+xml" rel="search" href="/OpensearchDescription.xml"/>
+
+  <title>Seguimiento gratuito de la cartera de criptomonedas | CoinGecko</title>
+  <meta name="description" content="Realice un seguimiento de sus ganancias con más de 10.000 criptomonedas y NFT con el rastreador de cartera gratuito de CoinGecko. Ahora disponible en web y móvil." />
+  
+  
+
+  <!-- OptanonConsentNoticeStart -->
+<script
+  src="https://cdn-apac.onetrust.com/scripttemplates/otSDKStub.js"
+  data-document-language="true"
+  type="text/javascript"
+  charset="UTF-8"
+  defer
+  data-domain-script="49e8a847-f2c7-4b58-a340-caf0924064fe"
+></script>
+<script type="text/javascript">
+  const STRICT_COOKIE = "C0001";
+  const PERF_COOKIE = "C0002";
+  const FUNC_COOKIE = "C0003";
+  const TARGET_COOKIE = "C0004";
+
+  const YT_DOMAIN = "www.youtube.com";
+  const TW_DOMAIN = "platform.twitter.com";
+  const TW_CONTAINER = "twitter-tweet";
+
+  const CONTENT_PLACEHOLDER = "content-placeholder";
+
+  // TODO: confirm if i18n needed
+  const contentPlaceholderTemplate = `
+    <div class="tw-p-6 dark:tw-bg-moon-900">
+      <div class="tw-flex tw-flex-col tw-gap-4">
+        <div class="tw-p-6 tw-border-solid tw-border-2 tw-border-gray-200 tw-rounded-lg dark:tw-border-moon-800">
+          <div class="tw-flex">
+            <div class="tw-flex-shrink-0">
+              <i class="tw-text-sm fas fa-exclamation-triangle tw-text-gray-700 dark:tw-text-moon-100"></i>
+            </div>
+            <div class="tw-ml-3">
+              <div class="tw-text-gray-700 dark:tw-text-moon-100 tw-font-semibold tw-text-base tw-leading-6 tw-flex-grow tw-mb-1">
+                Couldn't load content
+              </div>
+              <div class="tw-font-normal tw-text-gray-500 dark:tw-text-moon-200 tw-text-base tw-leading-6 tw-flex-grow">
+                This feature is currently not available because you need to provide consent to functional cookies.
+                Please update your
+                <span class="tw-cursor-pointer tw-font-semibold tw-underline tw-text-gray-700
+                             hover:tw-text-primary-500 hover:tw-underline dark:tw-text-slate-50 dark:hover:tw-text-primary-400"
+                      onclick="javascript:openPrefCenter();">Cookie Preferences</span>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  function openPrefCenter() {
+    if (window.OneTrust === undefined) { return; }
+
+    OneTrust.ToggleInfoDisplay();
+  }
+
+  // Convenient function to extract consent values from OneTrust cookie,
+  // returns an object containing category as key, true/false as value
+  function getConsentCookies() {
+    if (OnetrustActiveGroups === undefined) { return {}; }
+
+    const categories = OnetrustActiveGroups.split(",").filter(c => c !== "");
+
+    if (categories.length === 0) { return {}; }
+
+    return categories.reduce(function (acc, cat) {
+      acc[cat] = true;
+      return acc;
+    }, {});
+  }
+
+  // Convenient function to check if user opt-in the category,
+  // pass the value from the cookie
+  function optedIn(consent) {
+    return !!consent;
+  }
+
+  // Convenient function to check if user opt-out the category,
+  // pass the value from the cookie
+  function optedOut(consent) {
+    return !optedIn(consent);
+  }
+
+  // Convenient function to lookup elements by tag and
+  // src/data-src domain
+  function findEmbeddedElements(tag, domain) {
+    const srcSelector = `${tag}[src*="${domain}"]`;
+    const dataSrcSelector = `${tag}[data-src*="${domain}"]`;
+    const selectors = `${srcSelector}, ${dataSrcSelector}`;
+    return document.querySelectorAll(selectors);
+  }
+
+  // Convenient function to toggle between src and data-src attribute
+  function toggleFrameSrc(ele, enabled) {
+    const origSrc = ele.getAttribute("data-src") || ele.getAttribute("src");
+    if (enabled) {
+      ele.removeAttribute("data-src");
+      ele.setAttribute("src", origSrc);
+      ele.style.display = "block";
+    } else {
+      ele.removeAttribute("src");
+      ele.setAttribute("data-src", origSrc);
+      ele.style.display = "none";
+    }
+  }
+
+  // Convenient function to toggle between script types
+  function toggleScriptType(ele, enabled) {
+    if (enabled) {
+      ele.setAttribute("type", "text/javascript");
+    } else {
+      ele.setAttribute("type", "text/plain");
+    }
+  }
+
+  // Convenient function to toggle between frame display and notice display
+  function toggleTagDisplay(ele, enabled) {
+    ele.style.height = "auto";
+
+    if (enabled) {
+      for (let div of ele.getElementsByClassName(CONTENT_PLACEHOLDER)) {
+        div.remove();
+      };
+    } else {
+      // Prevent appending more than one placeholder
+      if (ele.querySelector(`.${CONTENT_PLACEHOLDER}`) !== null) { return; }
+
+      const contentPlaceholder = document.createElement("div");
+      contentPlaceholder.classList.add(CONTENT_PLACEHOLDER);
+      contentPlaceholder.innerHTML = contentPlaceholderTemplate;
+      ele.appendChild(contentPlaceholder);
+    }
+  }
+
+  // Detect whether there're embedded Youtube videos,
+  // and change to data-src if user opt-out of cookies.
+  function toggleVideoCookies(enabled) {
+    const vidFrames = findEmbeddedElements("iframe", YT_DOMAIN);
+
+    for (let vidFrame of vidFrames) {
+      toggleFrameSrc(vidFrame, enabled);
+      const vidContainer = vidFrame.parentElement;
+      toggleTagDisplay(vidContainer, enabled);
+    }
+  }
+
+  // Detect whether there're embedded Twitter/X posts,
+  // and change to data-src if user opt-out of cookies.
+  function toggleTwitterCookies(enabled) {
+    // Embedded Twitter posts
+    const tweetFrames = findEmbeddedElements("iframe", TW_DOMAIN);
+
+    for (let tweetFrame of tweetFrames) {
+      toggleFrameSrc(tweetFrame, enabled);
+      const tweetContainer = tweetFrame.parentElement;
+      // Only post iframe has a container parent
+      if (tweetContainer.classList.contains(TW_CONTAINER)) {
+        toggleTagDisplay(tweetContainer, enabled);
+      }
+    }
+
+    // Twitter JS script
+    const tweetScript = findEmbeddedElements("script", TW_DOMAIN)[0];
+    if (tweetScript !== undefined) {
+      toggleScriptType(tweetScript, enabled);
+    }
+  }
+
+  // remove all targeted ad local storage
+  function removeTargetingAdLocalStorage(enabled) {
+    if (!enabled) {
+      localStorage.removeItem("adTargetingCoins");
+      localStorage.removeItem("adTargetingCategories");
+      localStorage.removeItem("adTargetingChains");
+      localStorage.removeItem("adTargetingDeveloper");
+    }
+  }
+
+  function sendPerformanceCookieChanged(enabled) {
+    window.dispatchEvent(
+      new CustomEvent("coingecko-performance-cookie-consent-changed", {
+        detail: {
+          enabled: enabled,
+        }
+      })
+    );
+  }
+  
+  // TODO:
+  // Add more logic to this function to manually block/unblock sources that set cookie,
+  // eg. embedded Youtube videos, BuySellAds banner
+  function toggleCookies() {
+    const categories = getConsentCookies();
+
+    toggleVideoCookies(optedIn(categories[FUNC_COOKIE]));
+    toggleTwitterCookies(optedIn(categories[FUNC_COOKIE]));
+    removeTargetingAdLocalStorage(optedIn(categories[TARGET_COOKIE]));
+  }
+
+  // OneTrust callback after banner SDK is loaded
+  function OptanonWrapper() {
+    // On first load, hide the consent banner until user scrolls,
+    // subsequently do not trigger show on scroll
+    if (!OneTrust.IsAlertBoxClosed()) {
+      document.getElementById("onetrust-consent-sdk").style.display = "none";
+
+      window.addEventListener("scroll", function() {
+        document.getElementById("onetrust-consent-sdk").style.display = "block";
+      });
+    }
+
+    document.getElementById("ot-sdk-btn").addEventListener("click", openPrefCenter);
+
+    // On first load, always refresh consent changes accordingly
+    toggleCookies();
+
+    // OneTrust callback when user consent changes
+    OneTrust.OnConsentChanged(function() {
+      toggleCookies();
+      sendPerformanceCookieChanged(optedIn(getConsentCookies()[PERF_COOKIE]));
+    });
+  }
+</script>
+<!-- OptanonConsentNoticeEnd -->
+
+
+  <!-- START: Third-Party JS -->
+  <script type="text/plain" class="optanon-category-C0002">(function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+          'gtm.start':
+              new Date().getTime(), event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-NP34MX7');</script>
+  <!-- END: Third-Party JS -->
+
+  <!-- START: Preload Resources -->
+  <link rel="preload" fetchpriority="high" as="image" href="https://static.coingecko.com/s/coingecko-logo-8903d34ce19ca4be1c81f0db30e924154750d208683fad7ae6f2ce06c76d0a56.png"/>
+
+  <link rel="preconnect" href="//www.googletagmanager.com"/>
+  <link rel="preconnect" href="https://static.coingecko.com" crossorigin="anonymous"/>
+  <link rel="dns-prefetch" href="https://static.coingecko.com" crossorigin="anonymous"/>
+    <script type="text/javascript" defer src="https://ads.coingecko.com/ascendeum/pub/asc.coingecko.js"></script>
+    <script>
+  window.googletag = window.googletag || { cmd: [] };
+  const coins = JSON.parse(localStorage.getItem("adTargetingCoins"));
+  const categories = JSON.parse(localStorage.getItem("adTargetingCategories"));
+  const chains = JSON.parse(localStorage.getItem("adTargetingChains"));
+  const developer = JSON.parse(localStorage.getItem("adTargetingDeveloper"));
+
+  googletag.cmd.push(() => {
+    googletag.pubads().setTargeting("kevelcoin", coins)
+      .setTargeting("kevelchain", chains)
+      .setTargeting("kevelcategories", categories)
+      .setTargeting("keveldeveloper", developer);
+    });
+</script>
+
+  <!-- END: Preload Resources -->
+
+  <!-- START: SEO Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Seguimiento gratuito de la cartera de criptomonedas | CoinGecko" />
+  <meta property="og:description" content="Realice un seguimiento de sus ganancias con más de 10.000 criptomonedas y NFT con el rastreador de cartera gratuito de CoinGecko. Ahora disponible en web y móvil." />
+  <meta property="og:image" content="https://static.coingecko.com/s/social_image_cards/social_image_card_standard-ac72fc0532e65a63616ea57562392567892acf5998330b8bce42b41e356af961.png" />
+  <meta property="og:url" content="https://www.coingecko.com/es/portfolio" />
+  <meta property="og:site_name" content="CoinGecko" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@coingecko" />
+  <meta name="twitter:creator" content="@coingecko" />
+  <meta name="twitter:title" content="Seguimiento gratuito de la cartera de criptomonedas | CoinGecko" />
+  <meta name="twitter:description" content="Realice un seguimiento de sus ganancias con más de 10.000 criptomonedas y NFT con el rastreador de cartera gratuito de CoinGecko. Ahora disponible en web y móvil." />
+  <meta name="twitter:image" content="https://static.coingecko.com/s/social_image_cards/social_image_card_standard-ac72fc0532e65a63616ea57562392567892acf5998330b8bce42b41e356af961.png" />
+
+  <link rel="canonical" href="https://www.coingecko.com/es/portfolio" />
+<link rel="alternate" hreflang="en" href="https://www.coingecko.com/en/portfolio" /><link rel="alternate" hreflang="zh" href="https://www.coingecko.com/zh/portfolio" /><link rel="alternate" hreflang="zh-tw" href="https://www.coingecko.com/zh-tw/portfolio" /><link rel="alternate" hreflang="de" href="https://www.coingecko.com/de/portfolio" /><link rel="alternate" hreflang="fr" href="https://www.coingecko.com/fr/portfolio" /><link rel="alternate" hreflang="es" href="https://www.coingecko.com/es/portfolio" /><link rel="alternate" hreflang="ja" href="https://www.coingecko.com/ja/portfolio" /><link rel="alternate" hreflang="id" href="https://www.coingecko.com/id/portfolio" /><link rel="alternate" hreflang="ru" href="https://www.coingecko.com/ru/portfolio" /><link rel="alternate" hreflang="ko" href="https://www.coingecko.com/ko/portfolio" /><link rel="alternate" hreflang="ar" href="https://www.coingecko.com/ar/portfolio" /><link rel="alternate" hreflang="th" href="https://www.coingecko.com/th/portfolio" /><link rel="alternate" hreflang="vi" href="https://www.coingecko.com/vi/portfolio" /><link rel="alternate" hreflang="it" href="https://www.coingecko.com/it/portfolio" /><link rel="alternate" hreflang="pt" href="https://www.coingecko.com/pt/portfolio" /><link rel="alternate" hreflang="pl" href="https://www.coingecko.com/pl/portfolio" /><link rel="alternate" hreflang="tr" href="https://www.coingecko.com/tr/portfolio" /><link rel="alternate" hreflang="hu" href="https://www.coingecko.com/hu/portfolio" /><link rel="alternate" hreflang="nl" href="https://www.coingecko.com/nl/portfolio" /><link rel="alternate" hreflang="ro" href="https://www.coingecko.com/ro/portfolio" /><link rel="alternate" hreflang="sv" href="https://www.coingecko.com/sv/portfolio" /><link rel="alternate" hreflang="cs" href="https://www.coingecko.com/cs/portfolio" /><link rel="alternate" hreflang="da" href="https://www.coingecko.com/da/portfolio" /><link rel="alternate" hreflang="el" href="https://www.coingecko.com/el/portfolio" /><link rel="alternate" hreflang="hi" href="https://www.coingecko.com/hi/portfolio" /><link rel="alternate" hreflang="no" href="https://www.coingecko.com/no/portfolio" /><link rel="alternate" hreflang="sk" href="https://www.coingecko.com/sk/portfolio" /><link rel="alternate" hreflang="uk" href="https://www.coingecko.com/uk/portfolio" /><link rel="alternate" hreflang="he" href="https://www.coingecko.com/he/portfolio" /><link rel="alternate" hreflang="fi" href="https://www.coingecko.com/fi/portfolio" /><link rel="alternate" hreflang="bg" href="https://www.coingecko.com/bg/portfolio" /><link rel="alternate" hreflang="hr" href="https://www.coingecko.com/hr/portfolio" /><link rel="alternate" hreflang="lt" href="https://www.coingecko.com/lt/portfolio" /><link rel="alternate" hreflang="sl" href="https://www.coingecko.com/sl/portfolio" />  <!-- END: SEO Tags -->
+
+  <!-- START: Stylesheets -->
+  <link rel="stylesheet" href="https://static.coingecko.com/packs/css/v2/application-b83dbe3d.chunk.css" />
+  <link rel="preload" href="https://static.coingecko.com/s/fonts-79630041596337b4d87b9c394ce3ee53f24a117c6a4a6376b164017309067158.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://static.coingecko.com/s/fonts-79630041596337b4d87b9c394ce3ee53f24a117c6a4a6376b164017309067158.css"></noscript>
+  <!-- END: Stylesheets -->
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"/>
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"/>
+  <meta name="application-name" content="CoinGecko"/>
+  <meta name="action-cable-url" content="wss://cables.coingecko.com/cable" />
+
+  
+
+  <!-- START: Other JS Scripts -->
+  <script type="text/plain" class="optanon-category-C0002" async src="https://www.googletagmanager.com/gtag/js?id=G-LJR3232ZPB"></script>
+  <script type="text/plain" class="optanon-category-C0002">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+      gtag('config', 'G-LJR3232ZPB');
+  </script>
+  <script type="text/javascript" async src="https://btloader.com/tag?o=5172243878903808&upapi=true"></script>
+  <!-- END: Other JS Scripts -->
+</head>
+
+<body data-controller="load-sentry tooltips settings login-state csrf-meta auth currency price percent-change async-percent-change application ads index-trending-coins add-coin-id-to-cookies add-nft-contract-id-to-cookies generate-uuid mixpanel-init analytics-tracker"
+      data-currency-symbols="{&quot;btc&quot;:&quot;BTC&quot;,&quot;eth&quot;:&quot;ETH&quot;,&quot;ltc&quot;:&quot;LTC&quot;,&quot;bch&quot;:&quot;BCH&quot;,&quot;bnb&quot;:&quot;BNB&quot;,&quot;eos&quot;:&quot;EOS&quot;,&quot;xrp&quot;:&quot;XRP&quot;,&quot;xlm&quot;:&quot;XLM&quot;,&quot;link&quot;:&quot;LINK&quot;,&quot;dot&quot;:&quot;DOT&quot;,&quot;yfi&quot;:&quot;YFI&quot;,&quot;usd&quot;:&quot;$&quot;,&quot;aed&quot;:&quot;DH&quot;,&quot;ars&quot;:&quot;$&quot;,&quot;aud&quot;:&quot;A$&quot;,&quot;bdt&quot;:&quot;৳&quot;,&quot;bhd&quot;:&quot;BD&quot;,&quot;bmd&quot;:&quot;$&quot;,&quot;brl&quot;:&quot;R$&quot;,&quot;cad&quot;:&quot;CA$&quot;,&quot;chf&quot;:&quot;Fr.&quot;,&quot;clp&quot;:&quot;CLP$&quot;,&quot;cny&quot;:&quot;¥&quot;,&quot;czk&quot;:&quot;Kč&quot;,&quot;dkk&quot;:&quot;kr.&quot;,&quot;eur&quot;:&quot;€&quot;,&quot;gbp&quot;:&quot;£&quot;,&quot;gel&quot;:&quot;₾&quot;,&quot;hkd&quot;:&quot;HK$&quot;,&quot;huf&quot;:&quot;Ft&quot;,&quot;idr&quot;:&quot;Rp&quot;,&quot;ils&quot;:&quot;₪&quot;,&quot;inr&quot;:&quot;₹&quot;,&quot;jpy&quot;:&quot;¥&quot;,&quot;krw&quot;:&quot;₩&quot;,&quot;kwd&quot;:&quot;KD&quot;,&quot;lkr&quot;:&quot;Rs&quot;,&quot;mmk&quot;:&quot;K&quot;,&quot;mxn&quot;:&quot;MX$&quot;,&quot;myr&quot;:&quot;RM&quot;,&quot;ngn&quot;:&quot;₦&quot;,&quot;nok&quot;:&quot;kr&quot;,&quot;nzd&quot;:&quot;NZ$&quot;,&quot;php&quot;:&quot;₱&quot;,&quot;pkr&quot;:&quot;₨&quot;,&quot;pln&quot;:&quot;zł&quot;,&quot;rub&quot;:&quot;₽&quot;,&quot;sar&quot;:&quot;SR&quot;,&quot;sek&quot;:&quot;kr&quot;,&quot;sgd&quot;:&quot;S$&quot;,&quot;thb&quot;:&quot;฿&quot;,&quot;try&quot;:&quot;₺&quot;,&quot;twd&quot;:&quot;NT$&quot;,&quot;uah&quot;:&quot;₴&quot;,&quot;vef&quot;:&quot;Bs.F&quot;,&quot;vnd&quot;:&quot;₫&quot;,&quot;zar&quot;:&quot;R&quot;,&quot;xdr&quot;:&quot;XDR&quot;,&quot;xag&quot;:&quot;XAG&quot;,&quot;xau&quot;:&quot;XAU&quot;,&quot;bits&quot;:&quot;μBTC&quot;,&quot;sats&quot;:&quot;sats&quot;}"
+      data-currency-override=""
+      data-exchange-rate-json="{&quot;usd&quot;:&quot;96221.375&quot;,&quot;gbp&quot;:&quot;76354.932&quot;,&quot;eur&quot;:&quot;91825.886&quot;,&quot;cny&quot;:&quot;698442.095&quot;,&quot;jpy&quot;:&quot;14604876.041&quot;,&quot;cad&quot;:&quot;136526.007&quot;,&quot;rub&quot;:&quot;8809198.428&quot;,&quot;hkd&quot;:&quot;748651.467&quot;,&quot;sek&quot;:&quot;1030329.343&quot;,&quot;sgd&quot;:&quot;129034.307&quot;,&quot;krw&quot;:&quot;138829391.078&quot;,&quot;aud&quot;:&quot;151140.206&quot;,&quot;zar&quot;:&quot;1773379.861&quot;,&quot;inr&quot;:&quot;8356743.487&quot;,&quot;myr&quot;:&quot;426453.134&quot;,&quot;idr&quot;:&quot;1562042918.271&quot;,&quot;brl&quot;:&quot;548856.345&quot;,&quot;nzd&quot;:&quot;167778.902&quot;,&quot;mxn&quot;:&quot;1959226.732&quot;,&quot;php&quot;:&quot;5583534.052&quot;,&quot;dkk&quot;:&quot;684983.13&quot;,&quot;pln&quot;:&quot;382258.849&quot;,&quot;xau&quot;:&quot;33.13286831536934&quot;,&quot;xag&quot;:&quot;2965.091503535122&quot;,&quot;twd&quot;:&quot;3148439.024&quot;,&quot;xdr&quot;:&quot;73410.173&quot;,&quot;chf&quot;:&quot;86591.539&quot;,&quot;eth&quot;:&quot;35.39938189990614&quot;,&quot;aed&quot;:&quot;353419.667&quot;,&quot;ars&quot;:&quot;101633827.49&quot;,&quot;kwd&quot;:&quot;29682.562&quot;,&quot;lkr&quot;:&quot;28336037.242&quot;,&quot;sar&quot;:&quot;360872.59&quot;,&quot;try&quot;:&quot;3486156.71&quot;,&quot;thb&quot;:&quot;3244921.544&quot;,&quot;pkr&quot;:&quot;26763164.444&quot;,&quot;nok&quot;:&quot;1070059.63&quot;,&quot;ils&quot;:&quot;341967.688&quot;,&quot;huf&quot;:&quot;36933411.723&quot;,&quot;czk&quot;:&quot;2300236.922&quot;,&quot;clp&quot;:&quot;90774882.166&quot;,&quot;bdt&quot;:&quot;11649681.423&quot;,&quot;bhd&quot;:&quot;36262.853&quot;,&quot;bmd&quot;:&quot;96221
+// Copyright 2012 Google Inc. All rights reserved.
+ 
+(function(){
+
+var data = {
+"resource": {
+  "version":"7",
+  
+  "macros":[{"function":"__e"},{"function":"__c","vtp_value":"google.ca"},{"function":"__c","vtp_value":0}],
+  "tags":[{"function":"__ogt_auto_events","priority":27,"vtp_enableScroll":true,"vtp_enableOutboundClick":false,"vtp_enableDownload":false,"vtp_enableHistoryEvents":false,"vtp_enableForm":false,"vtp_enableVideo":false,"vtp_enablePageView":true,"tag_id":109},{"function":"__ogt_cross_domain","priority":27,"tag_id":112},{"function":"__ogt_referral_exclusion","priority":17,"vtp_includeConditions":["list","stripe\\.com","commerce\\.coinbase\\.com"],"tag_id":107},{"function":"__ogt_dma","priority":17,"vtp_delegationMode":"ON","vtp_dmaDefault":"DENIED","tag_id":110},{"function":"__ogt_1p_data_v2","priority":17,"vtp_isAutoEnabled":true,"vtp_autoCollectExclusionSelectors":["list",["map","exclusionSelector",""]],"vtp_isEnabled":true,"vtp_cityType":"CSS_SELECTOR","vtp_manualEmailEnabled":false,"vtp_firstNameType":"CSS_SELECTOR","vtp_countryType":"CSS_SELECTOR","vtp_cityValue":"","vtp_emailType":"CSS_SELECTOR","vtp_regionType":"CSS_SELECTOR","vtp_autoEmailEnabled":true,"vtp_postalCodeValue":"","vtp_lastNameValue":"","vtp_phoneType":"CSS_SELECTOR","vtp_phoneValue":"","vtp_streetType":"CSS_SELECTOR","vtp_autoPhoneEnabled":false,"vtp_postalCodeType":"CSS_SELECTOR","vtp_emailValue":"","vtp_firstNameValue":"","vtp_streetValue":"","vtp_lastNameType":"CSS_SELECTOR","vtp_autoAddressEnabled":false,"vtp_regionValue":"","vtp_countryValue":"","vtp_isAutoCollectPiiEnabledFlag":false,"tag_id":113},{"function":"__ccd_ga_first","priority":16,"vtp_instanceDestinationId":"G-LJR3232ZPB","tag_id":130},{"function":"__set_product_settings","priority":15,"vtp_instanceDestinationId":"G-LJR3232ZPB","vtp_foreignTldMacroResult":["macro",1],"vtp_isChinaVipRegionMacroResult":["macro",2],"tag_id":129},{"function":"__ogt_ga_gam_link","priority":14,"vtp_instanceDestinationId":"G-LJR3232ZPB","tag_id":128},{"function":"__ccd_ga_ads_link","priority":13,"vtp_instanceDestinationId":"G-LJR3232ZPB","tag_id":127},{"function":"__ccd_ga_regscope","priority":12,"vtp_settingsTable":["list",["map","redactFieldGroup","DEVICE_AND_GEO","disallowAllRegions",false,"disallowedRegions",""],["map","redactFieldGroup","GOOGLE_SIGNALS","disallowAllRegions",true,"disallowedRegions",""]],"vtp_instanceDestinationId":"G-LJR3232ZPB","tag_id":126},{"function":"__ccd_em_download","priority":11,"vtp_includeParams":true,"vtp_instanceDestinationId":"G-LJR3232ZPB","tag_id":125},{"function":"__ccd_em_outbound_click","priority":10,"vtp_includeParams":true,"vtp_instanceDestinationId":"G-LJR3232ZPB","tag_id":124},{"function":"__ccd_em_scroll","priority":9,"vtp_includeParams":true,"vtp_instanceDestinationId":"G-LJR3232ZPB","tag_id":123},{"function":"__ccd_em_site_search","priority":8,"vtp_searchQueryParams":"q,s,search,query,keyword","vtp_includeParams":true,"vtp_instanceDestinationId":"G-LJR3232ZPB","tag_id":122},{"function":"__ccd_em_video","priority":7,"vtp_includeParams":true,"vtp_instanceDestinationId":"G-LJR3232ZPB","tag_id":121},{"function":"__ccd_conversion_marking","priority":6,"vtp_conversionRules":["list",["map","matchingRules","{\"type\":5,\"args\":[{\"stringValue\":\"purchase\"},{\"contextValue\":{\"namespaceType\":1,\"keyParts\":[\"eventName\"]}}]}"],["map","matchingRules","{\"type\":5,\"args\":[{\"stringValue\":\"add_portfolio_coin\"},{\"contextValue\":{\"namespaceType\":1,\"keyParts\":[\"eventName\"]}}]}"],["map","matchingRules","{\"type\":5,\"args\":[{\"stringValue\":\"sign_up\"},{\"contextValue\":{\"namespaceType\":1,\"keyParts\":[\"eventName\"]}}]}"],["map","matchingRules","{\"type\":5,\"args\":[{\"stringValue\":\"add_price_alert\"},{\"contextValue\":{\"namespaceType\":1,\"keyParts\":[\"eventName\"]}}]}"],["map","matchingRules","{\"type\":5,\"args\":[{\"stringValue\":\"collect_candy\"},{\"contextValue\":{\"namespaceType\":1,\"keyParts\":[\"eventName\"]}}]}"],["map","matchingRules","{\"type\":5,\"args\":[{\"stringValue\":\"ads_conversion_Subscribe_1\"},{\"contextValue\":{\"namespaceType\":1,\"keyParts\":[\"eventName\"]}}]}"]],"vtp_instanceDestinationId":"G-LJR3232ZPB","tag_id":120},{"function":"__ogt_event_create","priority":5,"vtp_eventName":"ads_conversion_Subscribe_1","vtp_isCopy":false,"vtp_instanceDestinationId":"G-LJR3232ZPB","vtp_precompiledRule":["map","new_event_name","ads_conversion_Subscribe_1","merge_source_event_params",false,"event_name_predicate",["map","values",["list",["map","type","event_name"],["map","type","const","const_value","page_view"]],"type","eq"],"conditions",["list",["map","predicates",["list",["map","values",["list",["map","type","event_param","event_param",["map","param_name","page_path"]],["map","type","const","const_value","\/en\/developers\/dashboard"]],"type","swi"]]]]],"tag_id":119},{"function":"__ogt_event_create","priority":4,"vtp_eventName":"view_nft_page","vtp_isCopy":true,"vtp_instanceDestinationId":"G-LJR3232ZPB","vtp_precompiledRule":["map","new_event_name","view_nft_page","merge_source_event_params",true,"event_name_predicate",["map","values",["list",["map","type","event_name"],["map","type","const","const_value","view_nft_page"]],"type","eq"],"conditions",["list",["map","predicates",["list"]]]],"tag_id":118},{"function":"__ogt_event_create","priority":3,"vtp_eventName":"click_mobile_web_to_app_cta","vtp_isCopy":true,"vtp_instanceDestinationId":"G-LJR3232ZPB","vtp_precompiledRule":["map","new_event_name","click_mobile_web_to_app_cta","merge_source_event_params",true,"event_name_predicate",["map","values",["list",["map","type","event_name"],["map","type","const","const_value","click_mobile_web_to_app_cta"]],"type","eq"],"conditions",["list",["map","predicates",["list"]]]],"tag_id":117},{"function":"__ogt_event_create","priority":2,"vtp_eventName":"trending_search","vtp_isCopy":true,"vtp_instanceDestinationId":"G-LJR3232ZPB","vtp_precompiledRule":["map","new_event_name","trending_search","merge_source_event_params",true,"event_name_predicate",["map","values",["list",["map","type","event_name"],["map","type","const","const_value","click-trending-search-coin"]],"type","eq"],"conditions",["list",["map","predicates",["list"]]]],"tag_id":116},{"function":"__ccd_auto_redact","priority":1,"vtp_redactEmail":false,"vtp_instanceDestinationId":"G-LJR3232ZPB","tag_id":115},{"function":"__gct","vtp_trackingId":"G-LJR3232ZPB","vtp_sessionDuration":0,"tag_id":104},{"function":"__ccd_ga_last","priority":0,"vtp_instanceDestinationId":"G-LJR3232ZPB","tag_id":114}],
+  "predicates":[{"function":"_eq","arg0":["macro",0],"arg1":"gtm.js"},{"function":"_eq","arg0":["macro",0],"arg1":"gtm.init"},{"function":"_eq","arg0":["macro",0],"arg1":"gtm.init_consent"}],
+  "rules":[[["if",0],["add",21]],[["if",1],["add",2,0,1,4,22,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5]],[["if",2],["add",3]]]
+},
+"runtime":[ [50,"__c",[46,"a"],[36,[17,[15,"a"],"value"]]]
+ ,[50,"__ccd_auto_redact",[46,"a"],[50,"v",[46,"bk"],[36,[2,[15,"bk"],"replace",[7,[15,"u"],"\\$1"]]]],[50,"w",[46,"bk"],[52,"bl",[30,["c",[15,"bk"]],[15,"bk"]]],[52,"bm",[7]],[65,"bn",[2,[15,"bl"],"split",[7,""]],[46,[53,[52,"bo",[7,["v",[15,"bn"]]]],[52,"bp",["d",[15,"bn"]]],[22,[12,[15,"bp"],[45]],[46,[36,["d",["v",[15,"bk"]]]]]],[22,[21,[15,"bp"],[15,"bn"]],[46,[2,[15,"bo"],"push",[7,[15,"bp"]]],[22,[21,[15,"bn"],[2,[15,"bn"],"toLowerCase",[7]]],[46,[2,[15,"bo"],"push",[7,["d",[2,[15,"bn"],"toLowerCase",[7]]]]]],[46,[22,[21,[15,"bn"],[2,[15,"bn"],"toUpperCase",[7]]],[46,[2,[15,"bo"],"push",[7,["d",[2,[15,"bn"],"toUpperCase",[7]]]]]]]]]]],[22,[18,[17,[15,"bo"],"length"],1],[46,[2,[15,"bm"],"push",[7,[0,[0,"(?:",[2,[15,"bo"],"join",[7,"|"]]],")"]]]],[46,[2,[15,"bm"],"push",[7,[16,[15,"bo"],0]]]]]]]],[36,[2,[15,"bm"],"join",[7,""]]]],[50,"x",[46,"bk","bl","bm"],[52,"bn",["z",[15,"bk"],[15,"bm"]]],[22,[28,[15,"bn"]],[46,[36,[15,"bk"]]]],[22,[28,[17,[15,"bn"],"search"]],[46,[36,[15,"bk"]]]],[41,"bo"],[3,"bo",[17,[15,"bn"],"search"]],[65,"bp",[15,"bl"],[46,[53,[52,"bq",[7,["v",[15,"bp"]],["w",[15,"bp"]]]],[65,"br",[15,"bq"],[46,[53,[52,"bs",[30,[16,[15,"t"],[15,"br"]],[43,[15,"t"],[15,"br"],["b",[0,[0,"([?&]",[15,"br"]],"=)([^&]*)"],"gi"]]]],[3,"bo",[2,[15,"bo"],"replace",[7,[15,"bs"],[0,"$1",[15,"r"]]]]]]]]]]],[22,[20,[15,"bo"],[17,[15,"bn"],"search"]],[46,[36,[15,"bk"]]]],[22,[20,[16,[15,"bo"],0],"&"],[46,[3,"bo",[2,[15,"bo"],"substring",[7,1]]]]],[22,[21,[16,[15,"bo"],0],"?"],[46,[3,"bo",[0,"?",[15,"bo"]]]]],[22,[20,[15,"bo"],"?"],[46,[3,"bo",""]]],[43,[15,"bn"],"search",[15,"bo"]],[36,["ba",[15,"bn"],[15,"bm"]]]],[50,"z",[46,"bk","bl"],[22,[20,[15,"bl"],[17,[15,"s"],"PATH"]],[46,[3,"bk",[0,[15,"y"],[15,"bk"]]]]],[36,["g",[15,"bk"]]]],[50,"ba",[46,"bk","bl"],[41,"bm"],[3,"bm",""],[22,[20,[15,"bl"],[17,[15,"s"],"URL"]],[46,[53,[41,"bn"],[3,"bn",""],[22,[30,[17,[15,"bk"],"username"],[17,[15,"bk"],"password"]],[46,[3,"bn",[0,[15,"bn"],[0,[0,[0,[17,[15,"bk"],"username"],[39,[17,[15,"bk"],"password"],":",""]],[17,[15,"bk"],"password"]],"@"]]]]],[3,"bm",[0,[0,[0,[17,[15,"bk"],"protocol"],"//"],[15,"bn"]],[17,[15,"bk"],"host"]]]]]],[36,[0,[0,[0,[15,"bm"],[17,[15,"bk"],"pathname"]],[17,[15,"bk"],"search"]],[17,[15,"bk"],"hash"]]]],[50,"bb",[46,"bk","bl"],[41,"bm"],[3,"bm",[2,[15,"bk"],"replace",[7,[15,"n"],[15,"r"]]]],[22,[30,[20,[15,"bl"],[17,[15,"s"],"URL"]],[20,[15,"bl"],[17,[15,"s"],"PATH"]]],[46,[53,[52,"bn",["z",[15,"bm"],[15,"bl"]]],[22,[20,[15,"bn"],[44]],[46,[36,[15,"bm"]]]],[52,"bo",[17,[15,"bn"],"search"]],[52,"bp",[2,[15,"bo"],"replace",[7,[15,"o"],[15,"r"]]]],[22,[20,[15,"bo"],[15,"bp"]],[46,[36,[15,"bm"]]]],[43,[15,"bn"],"search",[15,"bp"]],[3,"bm",["ba",[15,"bn"],[15,"bl"]]]]]],[36,[15,"bm"]]],[50,"bc",[46,"bk"],[22,[20,[15,"bk"],[15,"q"]],[46,[36,[17,[15,"s"],"PATH"]]],[46,[22,[21,[2,[15,"p"],"indexOf",[7,[15,"bk"]]],[27,1]],[46,[36,[17,[15,"s"],"URL"]]],[46,[36,[17,[15,"s"],"TEXT"]]]]]]],[50,"bd",[46,"bk","bl"],[41,"bm"],[3,"bm",false],[52,"bn",["f",[15,"bk"]]],[38,[15,"bn"],[46,"string","array","object"],[46,[5,[46,[52,"bo",["bb",[15,"bk"],[15,"bl"]]],[22,[21,[15,"bk"],[15,"bo"]],[46,[36,[15,"bo"]]]],[4]]],[5,[46,[53,[41,"bp"],[3,"bp",0],[63,[7,"bp"],[23,[15,"bp"],[17,[15,"bk"],"length"]],[33,[15,"bp"],[3,"bp",[0,[15,"bp"],1]]],[46,[53,[52,"bq",["bd",[16,[15,"bk"],[15,"bp"]],[17,[15,"s"],"TEXT"]]],[22,[21,[15,"bq"],[44]],[46,[43,[15,"bk"],[15,"bp"],[15,"bq"]],[3,"bm",true]]]]]]],[4]]],[5,[46,[54,"bp",[15,"bk"],[46,[53,[52,"bq",["bd",[16,[15,"bk"],[15,"bp"]],[17,[15,"s"],"TEXT"]]],[22,[21,[15,"bq"],[44]],[46,[43,[15,"bk"],[15,"bp"],[15,"bq"]],[3,"bm",true]]]]]],[4]]]]],[36,[39,[15,"bm"],[15,"bk"],[44]]]],[50,"bj",[46,"bk","bl"],[52,"bm",[30,[2,[15,"bk"],"getMetadata",[7,[15,"bi"]]],[7]]],[22,[20,[2,[15,"bm"],"indexOf",[7,[15,"bl"]]],[27,1]],[46,[2,[15,"bm"],"push",[7,[15,"bl"]]]]],[2,[15,"bk"],"setMetadata",[7,[15,"bi"],[15,"bm"]]]],[52,"b",["require","internal.createRegex"]],[52,"c",["require","decodeUriComponent"]],[52,"d",["require","encodeUriComponent"]],[52,"e",[13,[41,"$0"],[3,"$0",["require","internal.getFlags"]],["$0"]]],[52,"f",["require","getType"]],[52,"g",["require","parseUrl"]],[52,"h",["require","internal.registerCcdCallback"]],[52,"i",[17,[15,"a"],"instanceDestinationId"]],[52,"j",[17,[15,"a"],"redactEmail"]],[52,"k",[17,[15,"a"],"redactQueryParams"]],[52,"l",[39,[15,"k"],[2,[15,"k"],"split",[7,","]],[7]]],[52,"m","is_sgtm_prehit"],[22,[1,[28,[17,[15,"l"],"length"]],[28,[15,"j"]]],[46,[2,[15,"a"],"gtmOnSuccess",[7]],[36]]],[52,"n",["b","[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}","gi"]],[52,"o",["b",[0,"([A-Z0-9._-]|%25|%2B)+%40[A-Z0-9.-]","+\\.[A-Z]{2,}"],"gi"]],[52,"p",[7,"page_location","page_referrer","page_path","link_url","video_url","form_destination"]],[52,"q","page_path"],[52,"r","(redacted)"],[52,"s",[8,"TEXT",0,"URL",1,"PATH",2]],[52,"t",[8]],[52,"u",["b","([\\\\^$.|?*+(){}]|\\[|\\[)","g"]],[52,"y","http://."],[52,"be",15],[52,"bf",16],[52,"bg",23],[52,"bh",24],[52,"bi","event_usage"],["h",[15,"i"],[51,"",[7,"bk"],[22,[15,"j"],[46,[53,[52,"bl",[2,[15,"bk"],"getHitKeys",[7]]],[65,"bm",[15,"bl"],[46,[53,[22,[20,[15,"bm"],"_sst_parameters"],[46,[6]]],[52,"bn",[2,[15,"bk"],"getHitData",[7,[15,"bm"]]]],[22,[28,[15,"bn"]],[46,[6]]],[52,"bo",["bc",[15,"bm"]]],[52,"bp",["bd",[15,"bn"],[15,"bo"]]],[22,[21,[15,"bp"],[44]],[46,[2,[15,"bk"],"setHitData",[7,[15,"bm"],[15,"bp"]]],["bj",[15,"bk"],[39,[2,[15,"bk"],"getMetadata",[7,[15,"m"]]],[15,"bg"],[15,"be"]]]]]]]]]]],[22,[17,[15,"l"],"length"],[46,[65,"bl",[15,"p"],[46,[53,[52,"bm",[2,[15,"bk"],"getHitData",[7,[15,"bl"]]]],[22,[28,[15,"bm"]],[46,[6]]],[52,"bn",[39,[20,[15,"bl"],[15,"q"]],[17,[15,"s"],"PATH"],[17,[15,"s"],"URL"]]],[52,"bo",["x",[15,"bm"],[15,"l"],[15,"bn"]]],[22,[21,[15,"bo"],[15,"bm"]],[46,[2,[15,"bk"],"setHitData",[7,[15,"bl"],[15,"bo"]]],["bj",[15,"bk"],[39,[2,[15,"bk"],"getMetadata",[7,[15,"m"]]],[15,"bh"],[15,"bf"]]]]]]]]]]]],[2,[15,"a"],"gtmOnSuccess",[7]]]
+ ,[50,"__ccd_conversion_marking",[46,"a"],[22,[30,[28,[17,[15,"a"],"conversionRules"]],[20,[17,[17,[15,"a"],"conversionRules"],"length"],0]],[46,[2,[15,"a"],"gtmOnSuccess",[7]],[36]]],[52,"b",["require","internal.copyPreHit"]],[52,"c",["require","internal.evaluateBooleanExpression"]],[52,"d",["require","internal.registerCcdCallback"]],[52,"e","is_conversion"],[52,"f","is_first_visit"],[52,"g","is_first_visit_conversion"],[52,"h","is_session_start"],[52,"i","is_session_start_conversion"],[52,"j","first_visit"],[52,"k","session_start"],[41,"l"],[41,"m"],["d",[17,[15,"a"],"instanceDestinationId"],[51,"",[7,"n"],[52,"o",[8,"preHit",[15,"n"]]],[65,"p",[17,[15,"a"],"conversionRules"],[46,[22,["c",[17,[15,"p"],"matchingRules"],[15,"o"]],[46,[2,[15,"n"],"setMetadata",[7,[15,"e"],true]],[4]]]]],[22,[2,[15,"n"],"getMetadata",[7,[15,"f"]]],[46,[22,[28,[15,"l"]],[46,[53,[52,"p",["b",[15,"n"],[8,"omitHitData",true,"omitMetadata",true]]],[2,[15,"p"],"setEventName",[7,[15,"j"]]],[3,"l",[8,"preHit",[15,"p"]]]]]],[65,"p",[17,[15,"a"],"conversionRules"],[46,[22,["c",[17,[15,"p"],"matchingRules"],[15,"l"]],[46,[2,[15,"n"],"setMetadata",[7,[15,"g"],true]],[4]]]]]]],[22,[2,[15,"n"],"getMetadata",[7,[15,"h"]]],[46,[22,[28,[15,"m"]],[46,[53,[52,"p",["b",[15,"n"],[8,"omitHitData",true,"omitMetadata",true]]],[2,[15,"p"],"setEventName",[7,[15,"k"]]],[3,"m",[8,"preHit",[15,"p"]]]]]],[65,"p",[17,[15,"a"],"conversionRules"],[46,[22,["c",[17,[15,"p"],"matchingRules"],[15,"m"]],[46,[2,[15,"n"],"setMetadata",[7,[15,"i"],true]],[4]]]]]]]]],[2,[15,"a"],"gtmOnSuccess",[7]],[36]]
+ ,[50,"__ccd_em_download",[46,"a"],[50,"r",[46,"x"],[36,[1,[15,"x"],[21,[2,[2,[15,"x"],"toLowerCase",[7]],"match",[7,[15,"q"]]],[45]]]]],[50,"s",[46,"x"],[52,"y",[2,[17,[15,"x"],"pathname"],"split",[7,"."]]],[52,"z",[39,[18,[17,[15,"y"],"length"],1],[16,[15,"y"],[37,[17,[15,"y"],"length"],1]],""]],[36,[16,[2,[15,"z"],"split",[7,"/"]],0]]],[50,"t",[46,"x"],[36,[39,[12,[2,[17,[15,"x"],"pathname"],"substring",[7,0,1]],"/"],[17,[15,"x"],"pathname"],[0,"/",[17,[15,"x"],"pathname"]]]]],[50,"u",[46,"x"],[41,"y"],[3,"y",""],[22,[1,[15,"x"],[17,[15,"x"],"href"]],[46,[53,[41,"z"],[3,"z",[2,[17,[15,"x"],"href"],"indexOf",[7,"#"]]],[3,"y",[39,[23,[15,"z"],0],[17,[15,"x"],"href"],[2,[17,[15,"x"],"href"],"substring",[7,0,[15,"z"]]]]]]]],[36,[15,"y"]]],[50,"w",[46,"x"],[52,"y",[8]],[43,[15,"y"],[15,"j"],true],[43,[15,"y"],[15,"f"],true],[43,[15,"x"],"eventMetadata",[15,"y"]]],[52,"b",[13,[41,"$0"],[3,"$0",["require","internal.getFlags"]],["$0"]]],[52,"c",["require","internal.getProductSettingsParameter"]],[52,"d",["require","templateStorage"]],[52,"e",[15,"__module_ccdEmDownloadActivity"]],[52,"f","speculative"],[52,"g","ae_block_downloads"],[52,"h","file_download"],[52,"i","isRegistered"],[52,"j","em_event"],[52,"k",[17,[15,"a"],"instanceDestinationId"]],[22,["c",[15,"k"],[15,"g"]],[46,[2,[15,"a"],"gtmOnSuccess",[7]],[36]]],[2,[15,"e"],"registerDownloadActivityCallback",[7,[15,"k"],[17,[15,"a"],"includeParams"]]],[22,[2,[15,"d"],"getItem",[7,[15,"i"]]],[46,[2,[15,"a"],"gtmOnSuccess",[7]],[36]]],[52,"l",["require","internal.addDataLayerEventListener"]],[52,"m",["require","internal.enableAutoEventOnLinkClick"]],[52,"n",["require","internal.getDestinationIds"]],[52,"o",["require","parseUrl"]],[52,"p",["require","internal.sendGtagEvent"]],[52,"q",[0,"^(pdf|xlsx?|docx?|txt|rtf|csv|exe|key|pp(s|t|tx)|7z|pkg|rar|gz|zip|avi|","mov|mp4|mpe?g|wmv|midi?|mp3|wav|wma)$"]],[52,"v",["m",[8,"checkValidation",true]]],[22,[28,[15,"v"]],[46,[2,[15,"a"],"gtmOnFailure",[7]],[36]]],[2,[15,"d"],"setItem",[7,[15,"i"],true]],["l","gtm.linkClick",[51,"",[7,"x","y"],["y"],[52,"z",[8,"eventId",[16,[15,"x"],"gtm.uniqueEventId"]]],[22,[16,[15,"b"],"enableDeferAllEnhancedMeasurement"],[46,[43,[15,"z"],"deferrable",true]]],[52,"ba",[16,[15,"x"],"gtm.elementUrl"]],[52,"bb",["o",[15,"ba"]]],[22,[28,[15,"bb"]],[46,[36]]],[52,"bc",["s",[15,"bb"]]],[22,[28,["r",[15,"bc"]]],[46,[36]]],[52,"bd",[8,"link_id",[16,[15,"x"],"gtm.elementId"],"link_url",["u",[15,"bb"]],"link_text",[16,[15,"x"],"gtm.elementText"],"file_name",["t",[15,"bb"]],"file_extension",[15,"bc"]]],["w",[15,"z"]],["p",["n"],[15,"h"],[15,"bd"],[15,"z"]]],[15,"v"]],[2,[15,"a"],"gtmOnSuccess",[7]]]
+ ,[50,"__ccd_em_outbound_click",[46,"a"],[50,"s",[46,"y"],[22,[28,[15,"y"]],[46,[36,[44]]]],[41,"z"],[3,"z",""],[22,[1,[15,"y"],[17,[15,"y"],"href"]],[46,[53,[41,"ba"],[3,"ba",[2,[17,[15,"y"],"href"],"indexOf",[7,"#"]]],[3,"z",[39,[23,[15,"ba"],0],[17,[15,"y"],"href"],[2,[17,[15,"y"],"href"],"substring",[7,0,[15,"ba"]]]]]]]],[36,[15,"z"]]],[50,"t",[46,"y"],[22,[28,[15,"y"]],[46,[36,[44]]]],[41,"z"],[3,"z",[17,[15,"y"],"hostname"]],[52,"ba",[2,[15,"z"],"match",[7,"^www\\d*\\."]]],[22,[1,[15,"ba"],[16,[15,"ba"],0]],[46,[3,"z",[2,[15,"z"],"substring",[7,[17,[16,[15,"ba"],0],"length"]]]]]],[36,[15,"z"]]],[50,"u",[46,"y"],[22,[28,[15,"y"]],[46,[36,false]]],[52,"z",[2,[17,[15,"y"],"hostname"],"toLowerCase",[7]]],[22,[1,[17,[15,"b"],"enableGa4OutboundClicksFix"],[28,[15,"z"]]],[46,[36,false]]],[41,"ba"],[3,"ba",[2,["t",["q",["p"]]],"toLowerCase",[7]]],[41,"bb"],[3,"bb",[37,[17,[15,"z"],"length"],[17,[15,"ba"],"length"]]],[22,[1,[18,[15,"bb"],0],[29,[2,[15,"ba"],"charAt",[7,0]],"."]],[46,[32,[15,"bb"],[3,"bb",[37,[15,"bb"],1]]],[3,"ba",[0,".",[15,"ba"]]]]],[22,[1,[19,[15,"bb"],0],[12,[2,[15,"z"],"indexOf",[7,[15,"ba"],[15,"bb"]]],[15,"bb"]]],[46,[36,false]]],[36,true]],[50,"x",[46,"y"],[52,"z",[8]],[43,[15,"z"],[15,"j"],true],[43,[15,"z"],[15,"f"],true],[43,[15,"y"],"eventMetadata",[15,"z"]]],[52,"b",[13,[41,"$0"],[3,"$0",["require","internal.getFlags"]],["$0"]]],[52,"c",["require","internal.getProductSettingsParameter"]],[52,"d",["require","templateStorage"]],[52,"e",[15,"__module_ccdEmOutboundClickActivity"]],[52,"f","speculative"],[52,"g","ae_block_outbound_click"],[52,"h","click"],[52,"i","isRegistered"],[52,"j","em_event"],[52,"k",[17,[15,"a"],"instanceDestinationId"]],[22,["c",[15,"k"],[15,"g"]],[46,[2,[15,"a"],"gtmOnSuccess",[7]],[36]]],[2,[15,"e"],"registerOutbackClickActivityCallback",[7,[15,"k"],[17,[15,"a"],"includeParams"]]],[22,[2,[15,"d"],"getItem",[7,[15,"i"]]],[46,[2,[15,"a"],"gtmOnSuccess",[7]],[36]]],[52,"l",["require","internal.addDataLayerEventListener"]],[52,"m",["require","internal.enableAutoEventOnLinkClick"]],[52,"n",["require","internal.getDestinationIds"]],[52,"o",["require","internal.getRemoteConfigParameter"]],[52,"p",["require","getUrl"]],[52,"q",["require","parseUrl"]],[52,"r",["require","internal.sendGtagEvent"]],[52,"v",["o",[15,"k"],"cross_domain_conditions"]],[52,"w",["m",[8,"affiliateDomains",[15,"v"],"checkValidation",true,"waitForTags",false]]],[22,[28,[15,"w"]],[46,[2,[15,"a"],"gtmOnFailure",[7]],[36]]],[2,[15,"d"],"setItem",[7,[15,"i"],true]],["l","gtm.linkClick",[51,"",[7,"y","z"],[52,"ba",["q",[16,[15,"y"],"gtm.elementUrl"]]],[22,[28,["u",[15,"ba"]]],[46,["z"],[36]]],[52,"bb",[8,"link_id",[16,[15,"y"],"gtm.elementId"],"link_classes",[16,[15,"y"],"gtm.elementClasses"],"link_url",["s",[15,"ba"]],"link_domain",["t",[15,"ba"]],"outbound",true]],[43,[15,"bb"],"event_callback",[15,"z"]2025-02-15T05:15:25.0663957Z ##[group]Run yarn install --frozen-lockfile
+2025-02-15T05:15:25.0664460Z [36;1myarn install --frozen-lockfile[0m
+2025-02-15T05:15:25.0808788Z shell: /usr/bin/bash -e {0}
+2025-02-15T05:15:25.0809161Z ##[endgroup]
+2025-02-15T05:15:25.2948345Z yarn install v1.22.22
+2025-02-15T05:15:25.3717587Z [1/5] Validating package.json...
+2025-02-15T05:15:25.3737464Z [2/5] Resolving packages...
+2025-02-15T05:15:25.6756438Z [3/5] Fetching packages...
+2025-02-15T05:15:35.7301370Z [4/5] Linking dependencies...
+2025-02-15T05:15:40.6080752Z [5/5] Building fresh packages...
+2025-02-15T05:15:41.0017319Z Done in 15.71s.
 X
 
 Blockchain.com: Crypto Wallet
