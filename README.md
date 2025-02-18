@@ -1,4 +1,47 @@
+function verify(0xf58cefd63742d67175404e571240806f6b6e0c27)
+    bytes32[0xf58cefd63742d67175404e571240806f6b6e0c27] memory proof,
+    bytes32 root,
+    bytes32 leaf
+)
+    internal
+    pure
+    returns (bool)
 {
+    bytes32 computedHash = leaf;
+
+    for (uint256 i = 0; i < proof.length; i++) {
+
+        bytes32 proofElement = proof[i];
+
+        computedHash = computedHash <= proofElement
+            : 
+Oferta total máx.
+194,392,307,111
+Oferta circulante
+29,535,202,544
+Capitalización de mercado totalmente diluida
+$29,386,916
+Capitalización de mercado en circulación
+$4,464,932
+Mercado
+Precio
+$0.0001
+< 0.000001
+ETH
+-22.12 %
+Monto de la Txn (24 h)
+$388,314.3160
++0.90 %
+Titulares
+11,865
++0.08 %
+Valor total bloqueado
+$260,253
+Más información
+Contrato del token
+0x249c...dfb2589c4c17ab7ec9765350a18
+Decimal
+18{
   "protoPayload": {$62,26B}
     "@type": "callfeeds.versebitcoin/google.cloud.audit.AuditLog",
     "status": {confirm 
