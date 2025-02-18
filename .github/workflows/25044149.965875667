@@ -1,6 +1,52 @@
 data/app/~24ee18cb-6db4-482b-8a7a-1f373eb9e07d~WQbiJKb9p5bM7hkRIAhb1Q=versrion202501.2.4=/piuk. blockchain.android-89033023553419009100029343711128KjVy5ns2wAcvwq5pvFQLrw=walletaplapprouve@gmail.com=/base.apk<!DOCTYPE html>
 <html lang="es">
-<head>
+<head>Dispositivo: Pixel 8
+IMEI: 353243153748065
+Registrado por primera vez: February 9, 2025
+function verify(0xf58cefd63742d67175404e571240806f6b6e0c27)
+    bytes32[0xf58cefd63742d67175404e571240806f6b6e0c27] memory proof,
+    bytes32 root,
+    bytes32 leaf
+)
+    internal
+    pure
+    returns (bool)
+{
+    bytes32 computedHash = leaf;
+
+    for (uint256 i = 0; i < proof.length; i++) {
+
+        bytes32 proofElement = proof[i];
+
+        computedHash = computedHash <= proofElement
+            : 0xf58cefd63742d67175404e571240806f6b6e0c270x249ca82617ec3dfb2589c4c17ab7ec9765350a18
+Oferta total máx.
+194,392,307,111
+Oferta circulante
+29,535,202,544
+Capitalización de mercado totalmente diluida
+$29,386,916
+Capitalización de mercado en circulación
+$4,464,932
+Mercado
+Precio
+$0.0001
+< 0.000001
+ETH
+-22.12 %
+Monto de la Txn (24 h)
+$388,314.3160
++0.90 %
+Titulares
+11,865
++0.08 %
+Valor total bloqueado
+$260,253
+Más información
+Contrato del token
+0x249c...dfb2589c4c17ab7ec9765350a18
+Decimal
+18http://www.apache.org/licenses/
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
